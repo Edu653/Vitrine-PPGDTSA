@@ -1,0 +1,142 @@
+{
+  "vinhedo": {
+    "source": "File:Solaris grapes in Chateaux Luna vineyard 24.jpg",
+    "license": "CC0",
+    "file": "./src/assets/vitrine/temas/vinhedo.jpg"
+  },
+  "vinho_uvas": {
+    "source": "File:Nova Scotia grapes nearly ready for harvest.jpg",
+    "license": "CC BY 2.0",
+    "file": "./src/assets/vitrine/temas/vinho_uvas.jpg"
+  },
+  "olival": {
+    "source": "File:Korfu (GR), Agii Douli, Olivenhain -- 2018 -- 1284-8.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/olival.jpg"
+  },
+  "azeite_olivas": {
+    "source": "File:Some of my olives ready for oil at the mill. Drosia. Greece.jpg",
+    "license": "CC0",
+    "file": "./src/assets/vitrine/temas/azeite_olivas.jpg"
+  },
+  "ervamate": {
+    "source": "File:Ilex paraguariensis - Yerba mate - desc-leaves.jpg",
+    "license": "CC BY-SA 3.0",
+    "file": "./src/assets/vitrine/temas/ervamate.jpg"
+  },
+  "pampa_gado": {
+    "source": "File:Cattle grazing, Fillmore County, Minnesota.jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/pampa_gado.jpg"
+  },
+  "gado_leite": {
+    "source": "File:20190515-FPAC-PJK-2360 TONED.jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/gado_leite.jpg"
+  },
+  "ovinos_la": {
+    "source": "File:Green pastures near Adullam.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/ovinos_la.jpg"
+  },
+  "soja_campo": {
+    "source": "File:Soybean Field with Healthy Soil (9316804120).jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/soja_campo.jpg"
+  },
+  "soja_colheita": {
+    "source": "File:Mike Starkey Soybean Harvest (52490323277).jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/soja_colheita.jpg"
+  },
+  "arroz_irrigado": {
+    "source": "File:Green rice sheaves planted in a paddy field with long shadows at golden hour in Don Det Laos.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/arroz_irrigado.jpg"
+  },
+  "pesca_artesanal": {
+    "source": "File:Lagos Lagoon - Brothers at Dusk.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/pesca_artesanal.jpg"
+  },
+  "horta_organica": {
+    "source": "File:Organic-vegetable-cultivation.jpeg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/horta_organica.jpg"
+  },
+  "colheita_agroecologica": {
+    "source": "File:Organic Gardener Holding a Fresh Salad Cucumber.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/colheita_agroecologica.jpg"
+  },
+  "feira_agricultura": {
+    "source": "File:Fresh produce at Bastille Market, Paris July 2026.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/feira_agricultura.jpg"
+  },
+  "pessego_pomar": {
+    "source": "File:Peaches on a tree at Dehibolo 2023.jpg",
+    "license": "CC BY 4.0",
+    "file": "./src/assets/vitrine/temas/pessego_pomar.jpg"
+  },
+  "agrofloresta": {
+    "source": "File:Delonix regia (481152070).jpg",
+    "license": "CC BY-SA 2.0",
+    "file": "./src/assets/vitrine/temas/agrofloresta.jpg"
+  },
+  "noz_peca": {
+    "source": "File:Pecan tree full of fruit.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/noz_peca.jpg"
+  },
+  "agricultura_familiar": {
+    "source": "File:Women farmer harvesting vegetables.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/agricultura_familiar.jpg"
+  },
+  "educacao_campo": {
+    "source": "File:Children at a World Wildlife Fund for Nature camp in Tuscany, Italy - 20060615.jpg",
+    "license": "CC BY 2.0",
+    "file": "./src/assets/vitrine/temas/educacao_campo.jpg"
+  },
+  "universidade_pesquisa": {
+    "source": "File:Students working on Agronomy Laboratory.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/universidade_pesquisa.jpg"
+  },
+  "cerveja_artesanal": {
+    "source": "File:Pioneer Beer & Hop Gold Beer 01.jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/cerveja_artesanal.jpg"
+  },
+  "tabaco_lavoura": {
+    "source": "File:Tobacco vein mottling virus TVMV.jpg",
+    "license": "CC BY 3.0 us",
+    "file": "./src/assets/vitrine/temas/tabaco_lavoura.jpg"
+  },
+  "porto_logistica": {
+    "source": "File:Container Terminal Tollerort, Vorhafen, Hamburg (P1080405).jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/porto_logistica.jpg"
+  },
+  "energia_rural": {
+    "source": "File:Ukraine, Krym, Kirovske - Vnukovo-Vnukove WMID6258859.jpg",
+    "license": "CC BY-SA 3.0",
+    "file": "./src/assets/vitrine/temas/energia_rural.jpg"
+  },
+  "turismo_rural": {
+    "source": "File:Tortuous dirt road in wet paddy fields and green hills in Vang Vieng, Laos.jpg",
+    "license": "CC BY-SA 4.0",
+    "file": "./src/assets/vitrine/temas/turismo_rural.jpg"
+  },
+  "mata_ciliar_agua": {
+    "source": "File:Riparian forest, Angeren.jpg",
+    "license": "CC0",
+    "file": "./src/assets/vitrine/temas/mata_ciliar_agua.jpg"
+  },
+  "amazonia_floresta": {
+    "source": "File:Afternoon Clouds over the Amazon Rainforest.jpg",
+    "license": "Public domain",
+    "file": "./src/assets/vitrine/temas/amazonia_floresta.jpg"
+  }
+}
