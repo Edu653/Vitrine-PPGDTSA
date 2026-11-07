@@ -1,6 +1,6 @@
 /**
  * Catálogo da Vitrine Virtual de Trabalhos do PPGDTSA / DCSA / UFPel
- * Total: 83 trabalhos únicos (28 resumos originais do PDF + 55 sintetizados no mesmo padrão).
+ * Total: 82 trabalhos únicos (28 resumos originais do PDF + 54 sintetizados no mesmo padrão).
  * Compatível tanto com abertura direta via file:// quanto via servidor HTTP / GitHub Pages.
  */
 window.VITRINE_TRABALHOS = [
@@ -13,7 +13,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2017,
     "orientador": "Marcelo Fernandes Pacheco Dias",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3852",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3852",
     "imagens": [
       "./src/assets/vitrine/temas/vinhedo.jpg",
       "./src/assets/vitrine/temas/vinho_uvas.jpg"
@@ -30,7 +30,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2017,
     "orientador": "Robson Andreazza",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3853",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3853",
     "imagens": [
       "./src/assets/vitrine/temas/mata_ciliar_agua.jpg",
       "./src/assets/vitrine/temas/turismo_rural.jpg"
@@ -133,7 +133,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2017,
     "orientador": "Catia Grisa",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3850",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3850",
     "imagens": [
       "./src/assets/vitrine/temas/colheita_agroecologica.jpg",
       "./src/assets/vitrine/temas/feira_agricultura.jpg"
@@ -304,7 +304,7 @@ window.VITRINE_TRABALHOS = [
     "autor": "Luci Nara Lima Pereira",
     "ano": 2025,
     "orientador": "Aline Soares Pereira",
-    "tipo": "Tese de Doutorado",
+    "tipo": "Dissertação de Mestrado",
     "link": "https://guaiaca.ufpel.edu.br/handle/prefix/20195",
     "imagens": [
       "./src/assets/vitrine/temas/horta_organica.jpg",
@@ -339,7 +339,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2016,
     "orientador": "Elvis Silveira Martins",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/2961",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/2961",
     "imagens": [
       "./src/assets/vitrine/temas/cerveja_artesanal.jpg",
       "./src/assets/vitrine/temas/feira_agricultura.jpg"
@@ -356,7 +356,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2018,
     "orientador": "Mario Duarte Canever",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3864",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3864",
     "imagens": [
       "./src/assets/vitrine/temas/gado_leite.jpg",
       "./src/assets/vitrine/temas/pampa_gado.jpg"
@@ -373,7 +373,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2017,
     "orientador": "Mario Duarte Canever",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3849",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3849",
     "imagens": [
       "./src/assets/vitrine/temas/tabaco_lavoura.jpg",
       "./src/assets/vitrine/temas/agricultura_familiar.jpg"
@@ -563,7 +563,7 @@ window.VITRINE_TRABALHOS = [
     "autor": "Charlene Santana Ferreira",
     "ano": 2025,
     "orientador": "Patrícia Martins da Silva",
-    "tipo": "Tese de Doutorado",
+    "tipo": "Dissertação de Mestrado",
     "link": "https://guaiaca.ufpel.edu.br/handle/prefix/20188",
     "imagens": [
       "./src/assets/vitrine/temas/agricultura_familiar.jpg",
@@ -846,23 +846,6 @@ window.VITRINE_TRABALHOS = [
     "origemResumo": "ia_estilo_pdf"
   },
   {
-    "id": 51,
-    "titulo": "Secagem de grãos de arroz em leito fluidizado",
-    "subtitulo": "",
-    "resumo": "Avalia o desempenho operacional e energético da secagem de grãos de arroz em sistema de leito fluidizado.",
-    "autor": "Luiz Alberto Ramos Ustra",
-    "ano": 2005,
-    "orientador": "Moacir Cardoso Elias",
-    "tipo": "Dissertação de Mestrado",
-    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/15361",
-    "imagens": [
-      "./src/assets/vitrine/temas/arroz_irrigado.jpg",
-      "./src/assets/vitrine/temas/soja_colheita.jpg"
-    ],
-    "origemImagem": "tematica",
-    "origemResumo": "ia_estilo_pdf"
-  },
-  {
     "id": 52,
     "titulo": "Estimativa dos ganhos econômicos com a rotação do arroz com a soja em Terras Baixas",
     "subtitulo": "",
@@ -958,7 +941,7 @@ window.VITRINE_TRABALHOS = [
     "ano": 2017,
     "orientador": "Robson Andreazza",
     "tipo": "Dissertação de Mestrado",
-    "link": "http://repositorio.ufpel.edu.br/handle/prefix/3851",
+    "link": "https://guaiaca.ufpel.edu.br/handle/prefix/3851",
     "imagens": [
       "./src/assets/vitrine/temas/pesca_artesanal.jpg",
       "./src/assets/vitrine/temas/mata_ciliar_agua.jpg"

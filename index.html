@@ -246,6 +246,139 @@
     }
 
     /* =========================================================================
+       DICA VISUAL INICIAL DE GESTO ("ARRASTE PARA OS LADOS") AO ABRIR A VITRINE
+       ========================================================================= */
+    .swipe-hint {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(136px, 20.5dvh, 180px);
+      transform: translate3d(-50%, 12px, 0) scale(0.94);
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 20px 10px;
+      border-radius: 999px;
+      background: rgba(10, 22, 42, 0.80);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      box-shadow:
+        0 12px 30px rgba(7, 12, 22, 0.30),
+        0 0 0 1px rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.42s ease, transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    .swipe-hint.is-visible {
+      opacity: 1;
+      transform: translate3d(-50%, 0, 0) scale(1);
+    }
+
+    .swipe-hint-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      width: 124px;
+      height: 30px;
+      position: relative;
+    }
+
+    .swipe-arrow {
+      width: 18px;
+      height: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      flex-shrink: 0;
+    }
+
+    .swipe-arrow.arrow-left {
+      animation: swipeArrowLeft 1.75s ease-in-out infinite;
+    }
+
+    .swipe-arrow.arrow-right {
+      animation: swipeArrowRight 1.75s ease-in-out infinite;
+    }
+
+    .swipe-hand-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: swipeHandGlide 1.75s cubic-bezier(0.42, 0, 0.28, 1) infinite;
+      will-change: transform;
+    }
+
+    .swipe-touch-ring {
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      margin-left: -7px;
+      border-radius: 50%;
+      background: rgba(96, 165, 250, 0.48);
+      border: 1.5px solid rgba(191, 219, 254, 0.9);
+      animation: swipeTouchPulse 1.75s ease-in-out infinite;
+    }
+
+    .swipe-hand-icon {
+      width: 26px;
+      height: 26px;
+      color: #ffffff;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
+      position: relative;
+      z-index: 1;
+    }
+
+    .swipe-hint-label {
+      font-size: 0.80rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.96);
+    }
+
+    @keyframes swipeHandGlide {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+      28%      { transform: translate3d(-22px, 1px, 0) rotate(-10deg); }
+      68%      { transform: translate3d(22px, 1px, 0) rotate(10deg); }
+    }
+
+    @keyframes swipeTouchPulse {
+      0%, 100% { transform: scale(0.75); opacity: 0.45; }
+      28%, 68% { transform: scale(1.25); opacity: 0.95; }
+    }
+
+    @keyframes swipeArrowLeft {
+      0%, 100% { opacity: 0.4; transform: translateX(0); }
+      28%      { opacity: 1; transform: translateX(-4px); }
+      68%      { opacity: 0.28; transform: translateX(0); }
+    }
+
+    @keyframes swipeArrowRight {
+      0%, 100% { opacity: 0.4; transform: translateX(0); }
+      28%      { opacity: 0.28; transform: translateX(0); }
+      68%      { opacity: 1; transform: translateX(4px); }
+    }
+
+    /* Balanço inicial sutil no card para reforçar visualmente que a tela desliza */
+    .work-slide.is-hint-nudging {
+      animation: slideHintNudge 1.75s cubic-bezier(0.42, 0, 0.28, 1) 1;
+    }
+
+    @keyframes slideHintNudge {
+      0%, 100% { transform: translate3d(0, 0, 0); }
+      28%      { transform: translate3d(-16px, 0, 0); }
+      68%      { transform: translate3d(14px, 0, 0); }
+    }
+
+    /* =========================================================================
        ESTRUTURA VERTICAL COM TIPOGRAFIA AMPLIADA E NEGRITO REAL NO CELULAR
        ========================================================================= */
     .vitrine-shell {
@@ -496,6 +629,25 @@
       </div>
       <div class="hold-badge" id="holdBadge">Pausado</div>
 
+      <!-- Animação inicial sugerindo arrastar para os lados -->
+      <div class="swipe-hint" id="swipeHint" aria-hidden="true">
+        <div class="swipe-hint-track">
+          <svg class="swipe-arrow arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <div class="swipe-hand-wrap">
+            <span class="swipe-touch-ring"></span>
+            <svg class="swipe-hand-icon" viewBox="0 0 24 24" fill="rgba(255, 255, 255, 0.20)" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 15V4.5a2 2 0 0 1 4 0V11a1.75 1.75 0 0 1 3.5 0v1a1.75 1.75 0 0 1 3.5 0V16a6 6 0 0 1-6 6h-2.5a6 6 0 0 1-5.2-3l-2.4-4.1a1.6 1.6 0 0 1 2.7-1.7L10 15Z"></path>
+            </svg>
+          </div>
+          <svg class="swipe-arrow arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+        <span class="swipe-hint-label">Arraste para os lados</span>
+      </div>
+
       <!-- Camadas de fundo desfocadas e animadas sutilmente -->
       <div class="bg-canvas" aria-hidden="true">
         <div class="bg-photo-layer anim-a" id="bgLayer0"></div>
@@ -549,33 +701,131 @@
       const SWIPE_DISTANCE_PX = 46;
       const SWIPE_FLICK_PX = 24;
       const SWIPE_VELOCITY_PX_MS = 0.28;
+      const RECENT_MIN_YEAR = 2022;
+      const RECENT_WEIGHT_MULTIPLIER = 5; // Trabalhos de 2022+ aparecem 5x mais por ciclo (~74% da vitrine)
 
       const rawWorks = Array.isArray(window.VITRINE_TRABALHOS) ? window.VITRINE_TRABALHOS : [];
       if (!rawWorks.length) return;
+
+      function randomInt(maxExclusive) {
+        if (maxExclusive <= 1) return 0;
+        if (window.crypto && window.crypto.getRandomValues) {
+          const randBuf = new Uint32Array(1);
+          window.crypto.getRandomValues(randBuf);
+          return randBuf[0] % maxExclusive;
+        }
+        return Math.floor(Math.random() * maxExclusive);
+      }
 
       // Embaralhamento Fisher-Yates exclusivo para cada visitante/acesso
       function shuffleWorks(list) {
         const copy = list.slice();
         for (let i = copy.length - 1; i > 0; i--) {
-          const randBuf = new Uint32Array(1);
-          if (window.crypto && window.crypto.getRandomValues) {
-            window.crypto.getRandomValues(randBuf);
-            const j = randBuf[0] % (i + 1);
-            [copy[i], copy[j]] = [copy[j], copy[i]];
-          } else {
-            const j = Math.floor(Math.random() * (i + 1));
-            [copy[i], copy[j]] = [copy[j], copy[i]];
-          }
+          const j = randomInt(i + 1);
+          [copy[i], copy[j]] = [copy[j], copy[i]];
         }
         return copy;
       }
 
-      const deck = shuffleWorks(rawWorks);
+      // Gera uma rodada embaralhada garantindo distância mínima entre aparições do mesmo trabalho
+      function buildSpacedBatch(pool, avoidStartIds, avoidEndIds) {
+        const shuffled = shuffleWorks(pool);
+        const k = Math.floor(pool.length / 3);
+        if (k < 1) return shuffled;
+
+        const onlyEnd = [];
+        const both = [];
+        const onlyStart = [];
+        const neither = [];
+
+        for (const item of shuffled) {
+          const inStart = avoidStartIds.has(item.id);
+          const inEnd = avoidEndIds.has(item.id);
+          if (inStart && inEnd) both.push(item);
+          else if (inEnd) onlyEnd.push(item);
+          else if (inStart) onlyStart.push(item);
+          else neither.push(item);
+        }
+
+        const needFrontPad = Math.max(0, k - onlyEnd.length);
+        const front = shuffleWorks([...onlyEnd, ...neither.slice(0, needFrontPad)]);
+
+        const restNeither = neither.slice(needFrontPad);
+        const needMidPad = Math.max(0, k - both.length);
+        const middle = shuffleWorks([...both, ...restNeither.slice(0, needMidPad)]);
+
+        const back = shuffleWorks([...onlyStart, ...restNeither.slice(needMidPad)]);
+        return [...front, ...middle, ...back];
+      }
+
+      // Monta fila aleatória ponderada priorizando trabalhos de 2022 em diante (~74% das aparições)
+      // e reduzindo a frequência de anteriores a 2022 (~26%), sem repetições próximas.
+      function buildWeightedDeck(works) {
+        const recentPool = works.filter((w) => Number(w.ano) >= RECENT_MIN_YEAR);
+        const olderPool = works.filter((w) => Number(w.ano) < RECENT_MIN_YEAR);
+
+        if (!recentPool.length || !olderPool.length) {
+          return shuffleWorks(works);
+        }
+
+        const kGap = Math.floor(recentPool.length / 3);
+        const recentStream = [];
+
+        for (let round = 0; round < RECENT_WEIGHT_MULTIPLIER; round++) {
+          const isLastRound = round === RECENT_WEIGHT_MULTIPLIER - 1;
+          const avoidStart = new Set(recentStream.slice(-kGap).map((w) => w.id));
+          const avoidEnd = isLastRound
+            ? new Set(recentStream.slice(0, kGap).map((w) => w.id))
+            : new Set();
+
+          const batch = round === 0
+            ? shuffleWorks(recentPool)
+            : buildSpacedBatch(recentPool, avoidStart, avoidEnd);
+
+          recentStream.push(...batch);
+        }
+
+        const olderStream = shuffleWorks(olderPool);
+        const bucketCount = olderStream.length;
+        const baseRecents = Math.floor(recentStream.length / bucketCount);
+        const extraRecents = recentStream.length % bucketCount;
+
+        const recentCounts = [];
+        for (let i = 0; i < bucketCount; i++) {
+          recentCounts.push(baseRecents + (i < extraRecents ? 1 : 0));
+        }
+        const shuffledCounts = shuffleWorks(recentCounts);
+
+        const result = [];
+        let rCursor = 0;
+        let prevEndedWithOlder = false;
+
+        for (let b = 0; b < bucketCount; b++) {
+          const rCount = shuffledCounts[b];
+          const group = recentStream.slice(rCursor, rCursor + rCount);
+          rCursor += rCount;
+
+          // Inicia sempre com um trabalho recente (b === 0) e evita dois <2022 seguidos
+          const minPos = (b === 0 || prevEndedWithOlder) ? 1 : 0;
+          const maxPos = group.length;
+          const safeMin = Math.min(minPos, maxPos);
+          const insertPos = safeMin + randomInt(maxPos - safeMin + 1);
+
+          group.splice(insertPos, 0, olderStream[b]);
+          prevEndedWithOlder = insertPos === group.length - 1;
+          result.push(...group);
+        }
+
+        return result;
+      }
+
+      const deck = buildWeightedDeck(rawWorks);
       let currentIndex = 0;
 
       // Elementos do DOM
       const stageEl = document.getElementById('phoneStage');
       const slideEl = document.getElementById('workSlide');
+      const swipeHintEl = document.getElementById('swipeHint');
       const titleEl = document.getElementById('workTitle');
       const subtitleEl = document.getElementById('workSubtitle');
       const resumoEl = document.getElementById('workResumo');
@@ -763,6 +1013,33 @@
       let currentDx = 0;
       let dragStartTime = 0;
       let isHorizontalDrag = false;
+      let hintShowTimer = null;
+      let hintHideTimer = null;
+      let hintNudgeTimer = null;
+
+      function dismissSwipeHint() {
+        if (hintShowTimer) { clearTimeout(hintShowTimer); hintShowTimer = null; }
+        if (hintHideTimer) { clearTimeout(hintHideTimer); hintHideTimer = null; }
+        if (hintNudgeTimer) { clearTimeout(hintNudgeTimer); hintNudgeTimer = null; }
+        if (swipeHintEl) swipeHintEl.classList.remove('is-visible');
+        slideEl.classList.remove('is-hint-nudging');
+      }
+
+      function scheduleInitialSwipeHint() {
+        if (!swipeHintEl) return;
+        hintShowTimer = setTimeout(() => {
+          swipeHintEl.classList.add('is-visible');
+          slideEl.classList.add('is-hint-nudging');
+
+          hintNudgeTimer = setTimeout(() => {
+            slideEl.classList.remove('is-hint-nudging');
+          }, 1800);
+
+          hintHideTimer = setTimeout(() => {
+            dismissSwipeHint();
+          }, 4200);
+        }, 420);
+      }
 
       function isInteractiveLink(target) {
         return Boolean(target && target.closest && target.closest('.cta-btn'));
@@ -775,6 +1052,7 @@
       });
 
       stageEl.addEventListener('pointerdown', (e) => {
+        dismissSwipeHint();
         if (isInteractiveLink(e.target)) return;
         if (e.pointerType === 'mouse' && e.button !== 0) return;
         if (activePointerId !== null || isTransitioning) return;
@@ -856,11 +1134,14 @@
       // Suporte complementar a teclado para testes no computador (Setas e Espaço)
       window.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') {
+          dismissSwipeHint();
           goToSlide(currentIndex + 1, 'next');
         } else if (e.key === 'ArrowLeft') {
+          dismissSwipeHint();
           goToSlide(currentIndex - 1, 'prev');
         } else if (e.key === ' ' && !e.repeat) {
           e.preventDefault();
+          dismissSwipeHint();
           isHolding = true;
           stageEl.classList.add('is-holding');
         }
@@ -879,8 +1160,9 @@
         lastFrameTime = performance.now();
       });
 
-      // Inicialização imediata no primeiro trabalho aleatório
+      // Inicialização imediata no primeiro trabalho aleatório + dica inicial de arrasto
       populateWorkContent(deck[currentIndex]);
+      scheduleInitialSwipeHint();
       lastFrameTime = performance.now();
       requestAnimationFrame(tick);
     })();
